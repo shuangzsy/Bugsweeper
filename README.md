@@ -1,4 +1,4 @@
-# Woof Sweeper
+# Woofsweeper
 
 ## Background
 The rule of the game is to navigate the dog digging out all the food buried under the yard. If the puppy accidentally digs out a bug then the game will be over. And if it's a non bug squre then the game will keep going until the dog collects all the food.  
