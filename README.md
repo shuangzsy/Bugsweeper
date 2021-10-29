@@ -3,7 +3,7 @@
 ## Background
 The rule of the game is to navigate the dog digging out all the food buried under the yard. If the dog accidentally digs out a bug then the game will be over. And if it's a non bug squre then the game will keep going until the dog collects all the food.  
 
-The yard will be a m x n board. And each square on the board has three status: food/bug/empty. At the beginning of the game, the player needs to randomly select a square. Every non-bug position will have a number to indicate how many ajacent bugs it has (8 directions), and the player can make the decision for their next step based on the number and their luck. The player can only move the dog to the next square with valid path.
+The yard will be a m x n board. And each square on the board has three status: food/bug/empty. At the beginning of the game, the player needs to randomly select an initial postion for the dog. Every non-bug position will have a number to indicate how many ajacent bugs it has (8 directions), and the player can make the decision for their next step based on the number and their luck. The player can only move the dog to the next square with valid path.
 
 ## Functionality & MVPs
 In WoofSweeper, users will be able to:
