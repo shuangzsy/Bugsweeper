@@ -42,5 +42,6 @@ This project will be implemented with the following technologies:
 * Thursday Morning: Deploy to GitHub pages. Make any edits of the README if needs.
 
 ## Bonus Features (Optional)
-* Add options for the difficulty level set up
+* Add options for the game difficulty level set up
+* Add the drop down for the dog breed selection, and set the rule of different breed of dog
 * Add the turn on/off button for music
