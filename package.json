@@ -1,0 +1,39 @@
+{
+  "name": "Woofsweeper",
+  "version": "1.0.0",
+  "description": "## Background The rule of the game is to navigate the dog digging out all the food buried under the yard. If the dog accidentally digs out a bug then the game will be over. And if it's a non bug squre then the game will keep going until the dog collects all the food.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch --mode=development",
+    "build": "webpack --mode=production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shuangzsy/Woofsweeper.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shuangzsy/Woofsweeper/issues"
+  },
+  "homepage": "https://github.com/shuangzsy/Woofsweeper#readme",
+  "dependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "babel-loader": "^8.2.3",
+    "core-js": "^3.19.0",
+    "css-loader": "^6.5.0",
+    "mini-css-extract-plugin": "^2.4.3",
+    "regenerator-runtime": "^0.13.9",
+    "sass": "^1.43.4",
+    "sass-loader": "^12.3.0",
+    "webpack": "^5.61.0",
+    "webpack-cli": "^4.9.1"
+  },
+
+    "browserslist": [
+      "defaults"
+    ]
+}

@@ -1,0 +1,46 @@
+/*!*************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
+  \*************************************************************************************************************************************/
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  color: red;
+  font-size: 100px;
+}
+
+ul div {
+  display: flex;
+  justify-content: space-between;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.bugsweeper {
+  margin: 8px;
+  /* background-color: burlywood; */
+  height: 650px;
+  width: 700px;
+  margin: 0 auto;
+}
+
+/* body {
+  display: flex;
+  justify-items: center;
+} */
+li {
+  height: 150px;
+  width: 200px;
+
+  color: black;
+  font-size: 160px;
+}
+
+img:hover {
+  background-color: yellow;
+}
+
