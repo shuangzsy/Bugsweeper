@@ -3,7 +3,7 @@ const Game = require("./scripts/game.js");
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  let rowNum = 3;
+  let rowNum = 4;
   let colNum = 3;
   let game = new Game(rowNum,colNum);
 

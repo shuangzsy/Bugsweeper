@@ -1,9 +1,6 @@
 /*!*************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[1].use[1]!./node_modules/sass-loader/dist/cjs.js!./src/index.scss ***!
   \*************************************************************************************************************************************/
-
-
-
 body {
   margin: 0 auto;
 }
@@ -56,19 +53,25 @@ li {
   right: auto;
   height: 150px;
   width: 200px;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-size: 50px;
   text-align: center;
   font-weight: bold;
   color: coral;
+  padding: 20px;
 }
 
 li:hover {
   height: 150px;
   width: 200px;
-  background-color:rgb(216, 228, 111);
+  background-color: #d8e46f;
+  cursor: url("westie.png"), default !important;
 }
 
 button {
   margin: 0 auto;
+}
+
+img {
+  pointer-events: none;
 }

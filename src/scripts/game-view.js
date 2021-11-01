@@ -5,6 +5,9 @@ class View {
     this.el = el; 
     this.setupBoard();
     this.bindEvents();
+    this.meatNum = this.game.board.meatNum;
+    this.countMeat = 0;
+    console.log(this.grid)
   }
 
   bindEvents() {
@@ -22,19 +25,23 @@ class View {
     let row = parseInt(square.id[0]);
     
     let col = parseInt(square.id[2]);
-    console.log(col);
     const msg = document.createElement("h2")
-    console.log(this.grid[row][col]);
 
     if (this.grid[row][col] === "X"){
       square.innerHTML = "<img src='./src/scripts/bug.png'>";
-      msg.innerHTML = 'You hit a bug, game is over!'
+      msg.innerHTML = 'Oh no! You hit a bug, and game is over!'
     } else if (this.grid[row][col] === "O"){
+      this.countMeat += 1;
       let bugNear = this.game.bugNum([row, col]);
-      console.log(bugNear);
       square.innerHTML = "<img src='./src/scripts/meat.png'>";
-      msg.innerHTML = 'Wow, meat!'
-      setTimeout(() => { square.innerHTML = bugNear }, 1000);
+      if (this.countMeat == this.meatNum) {
+        msg.innerHTML = 'You Win!';
+      }else
+      {msg.innerHTML = 'Wow, meat!';
+      setTimeout(() => { msg.innerHTML = "" }, 2000);
+    }
+      setTimeout(() => { square.innerHTML = `🐛 ✖️${bugNear}` }, 1000);
+
     }
     document.querySelector("body").appendChild(msg);
   }

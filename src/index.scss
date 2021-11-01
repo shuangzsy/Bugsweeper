@@ -1,4 +1,6 @@
-body{ margin:0 auto; }
+body {
+  margin: 0 auto;
+}
 
 h1 {
   text-align: center;
@@ -21,40 +23,52 @@ ul {
   height: 450px;
   margin: 0 auto;
   position: relative;
-
 }
 
 .bugsweeper {
   height: 800px;
   width: 800px;
   margin: 0 auto;
-  display: flex; 
+  display: flex;
   align-items: center;
-  
 }
 
-.bugsweeper::before {    
-      content: "";
-      background-image: url("background.jpg");
-      background-size: cover;
-      position: absolute;
-      top: 0px;
-      right: 0px;
-      bottom: 0px;
-      left: 0px;
-      opacity: 0.3;
+.bugsweeper::before {
+  content: "";
+  background-image: url("background.jpg");
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.3;
 }
-
 
 li {
   left: auto;
   right: auto;
   height: 150px;
   width: 200px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 50px;
+  text-align: center;
+  font-weight: bold;
+  color: coral;
+  padding : 20px;
 }
 
-li:hover{
+li:hover {
   height: 150px;
   width: 200px;
   background-color:rgb(216, 228, 111);
+  cursor: url("westie.png"), default !important;
+}
+
+button {
+  margin: 0 auto;
+}
+
+img {
+  pointer-events: none;
 }
