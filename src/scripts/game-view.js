@@ -29,21 +29,26 @@ class View {
 
     if (this.grid[row][col] === "X"){
       square.innerHTML = "<img src='./src/scripts/bug.png'>";
-      msg.innerHTML = 'Oh no! You hit a bug, and game is over!'
+      this.showFailscreen()
     } else if (this.grid[row][col] === "O"){
       this.countMeat += 1;
       let bugNear = this.game.bugNum([row, col]);
       square.innerHTML = "<img src='./src/scripts/meat.png'>";
       if (this.countMeat == this.meatNum) {
-        msg.innerHTML = 'You Win!';
-      }else
-      {msg.innerHTML = 'Wow, meat!';
-      setTimeout(() => { msg.innerHTML = "" }, 2000);
-    }
-      setTimeout(() => { square.innerHTML = `🐛 ✖️${bugNear}` }, 1000);
+        this.showWinscreen()
+      }
+      setTimeout(() => { square.innerHTML = `🐛 :${bugNear}` }, 1000);
 
     }
     document.querySelector("body").appendChild(msg);
+  }
+
+  showWinscreen(){
+    document.querySelector('.win-container').style.display = 'flex';
+  }
+
+  showFailscreen() {
+    document.querySelector('.fail-container').style.display = 'flex';
   }
 
 }
