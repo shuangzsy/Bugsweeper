@@ -36,7 +36,7 @@ This project will be implemented with the following technologies:
 ## Implementation Timeline
 
 * **Friday Afternoon & Weekend**: Setup project, including getting webpack up and running. Get canvas to show up on the screen. Create Board and Component classes. Set up the initial state of the board, which include food and bugs distributed in different positions of the board.
-* **Monday**: Dedicate this day toward implementing the underlying logic of Woof Sweeper. 
+* **Monday**: Dedicate this day toward implementing the underlying logic of Bugsweeper. 
 * **Tuesday**: Make sure the logic work and the basic version of the game works.Finish functionality implementation.
 * **Wednesday**: Focus on styling.
 * **Thursday Morning**: Deploy to GitHub pages. Make any edits of the README if needs.
