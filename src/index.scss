@@ -1,3 +1,5 @@
+body{ margin:0 auto; }
+
 h1 {
   text-align: center;
 }
@@ -5,7 +7,7 @@ h1 {
 h2 {
   text-align: center;
   color: red;
-  font-size: 100px;
+  font-size: 50px;
 }
 
 ul div {
@@ -15,35 +17,44 @@ ul div {
 
 ul {
   list-style-type: none;
+  width: 700px;
+  height: 450px;
+  margin: 0 auto;
+  position: relative;
+
 }
 
 .bugsweeper {
-  margin: 8px;
-  /* background-color: burlywood; */
-  height: 650px;
-  width: 700px;
+  height: 800px;
+  width: 800px;
   margin: 0 auto;
+  display: flex; 
+  align-items: center;
+  
 }
 
-/* body {
-  display: flex;
-  justify-items: center;
-} */
+.bugsweeper::before {    
+      content: "";
+      background-image: url("background.jpg");
+      background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.3;
+}
+
 
 li {
-  height: 200px;
+  left: auto;
+  right: auto;
+  height: 150px;
   width: 200px;
-
-  border: rgb(56, 155, 56) solid 10px;
-  color: black;
-  font-size: 160px;
 }
 
 li:hover{
-  height: 200px;
+  height: 150px;
   width: 200px;
-  background-color: yellow;
-  /* border: black solid 10px; */
-  color: black;
-  font-size: 160px;
+  background-color:rgb(216, 228, 111);
 }
