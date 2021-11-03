@@ -31,14 +31,13 @@ class View {
       square.innerHTML = "<img src='./src/scripts/bug.png'>";
       this.showFailscreen()
     } else if (this.grid[row][col] === "O"){
-      this.countMeat += 1;
-      let bugNear = this.game.bugNum([row, col]);
-      square.innerHTML = "<img src='./src/scripts/meat.png'>";
+        this.countMeat += 1;
+        let bugNear = this.game.bugNum([row, col]);
+        square.innerHTML = "<img src='./src/scripts/meat.png'>";
       if (this.countMeat == this.meatNum) {
         this.showWinscreen()
       }
       setTimeout(() => { square.innerHTML = `🐛 :${bugNear}` }, 1000);
-
     }
     document.querySelector("body").appendChild(msg);
   }
