@@ -4,8 +4,8 @@ class Butterfly{
     this.x = x;
     this.y = y;
     this.c = this.canvas.getContext('2d');
-    this.dx = 2;
-    this.dy = 2;
+    this.dx = 1.5;
+    this.dy = 1.5;
     this.imgTag = new Image();
     this.imgTag.onload = this.animate.bind(this);
     this.imgTag.src = './dist/butterfly.png';
@@ -19,9 +19,9 @@ class Butterfly{
     // this.context.arc(this.x, this.y, 15, 0, Math.PI * 2, false);
     // this.context.strokeStyle = 'blue';
     // this.context.stroke();
-    this.c.drawImage(this.imgTag, this.x, this.y, this.imgTag.width / 80, this.imgTag.height / 60);
-    this.c.drawImage(this.imgTag, this.canvas.width - this.x, this.canvas.height - this.y, this.imgTag.width / 80, this.imgTag.height / 60);
-    this.c.drawImage(this.imgTag, 50 - this.x, 50 - this.y, this.imgTag.width / 80, this.imgTag.height / 60);
+    this.c.drawImage(this.imgTag, this.x, this.y, this.imgTag.width / 40, this.imgTag.height / 30);
+    this.c.drawImage(this.imgTag, this.canvas.width - this.x, this.canvas.height - this.y, this.imgTag.width / 40, this.imgTag.height / 30);
+    this.c.drawImage(this.imgTag, 50 - this.x, 50 - this.y, this.imgTag.width / 40, this.imgTag.height / 30);
 
     if (this.y  > this.canvas.height || this.y < 0){
       this.dy = -this.dy;
