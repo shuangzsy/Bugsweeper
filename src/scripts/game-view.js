@@ -27,6 +27,7 @@ class View {
   }
 
   handleDoubleclick(e){
+    e.preventDefault();
     let square = e.target;
     square.innerHTML = "<img src='./src/image/human.png'>";
   }
@@ -39,7 +40,7 @@ class View {
     const msg = document.createElement("h2")
 
     if (this.grid[row][col] === "X"){
-      square.innerHTML = "<img src='./src/scripts/bug.png'>";
+      square.innerHTML = "<img src='./src/image/bug.png'>";
       this.showFailscreen()
     } else if (this.grid[row][col] === "O"){
         this.countMeat += 1;
