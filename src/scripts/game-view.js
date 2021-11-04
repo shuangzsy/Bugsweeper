@@ -5,6 +5,7 @@ class View {
     this.el = el; 
     this.setupBoard();
     this.bindEvents();
+    this.bindEvents2();
     this.meatNum = this.game.board.meatNum;
     this.countMeat = 0;
     console.log(this.grid)
@@ -18,6 +19,16 @@ class View {
   handleClick(e){
     let square = e.target;
     this.showResult(square);
+  }
+
+  bindEvents2(){
+    const ul = document.querySelector("ul");
+    ul.addEventListener('contextmenu', this.handleDoubleclick.bind(this));
+  }
+
+  handleDoubleclick(e){
+    let square = e.target;
+    square.innerHTML = "<img src='./src/image/human.png'>";
   }
 
   showResult(square){
