@@ -72,7 +72,7 @@ const Butterfly = require("./scripts/butterfly").default;
       const failWindow = document.querySelector(".fail-container");
       failWindow.style.display = 'none';
       el.innerHTML = "";
-      timer.timeLeft = 0;
+      // timer.timeLeft = 0;
 
       let game = new Game(rowNum, colNum);
       let view = new View(el, game);
