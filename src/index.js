@@ -11,7 +11,6 @@ const Butterfly = require("./scripts/butterfly").default;
     const timeElement = document.getElementById('timer');
     const resultButton = document.getElementById('result');
     const resultShow = document.getElementById('result-show');
-    //fadsf
 
     let rowNum = 5;
     let colNum = 5;
