@@ -9,9 +9,11 @@ const Butterfly = require("./scripts/butterfly").default;
     const resetButton = document.getElementById("play-again");
     const resetButton2 = document.getElementById("play-again-2");
     const timeElement = document.getElementById('timer');
+    const resultButton = document.getElementById('result');
+    const resultShow = document.getElementById('result-show');
 
     let rowNum = 5;
-    let colNum = 6;
+    let colNum = 5;
     let timer;
     let timer2;
     let timer3;
@@ -50,8 +52,14 @@ const Butterfly = require("./scripts/butterfly").default;
           const timePlus = document.getElementById("time-plus");
           timePlus.style.display = 'flex';
           timer.timeLeft += 10;
-        }
-      }, false);
+          }
+        }, false);
+
+      //result button
+      resultButton.addEventListener("click", () => {
+        resultShow.innerHTML = view.grid;
+      });
+
       
     });
 
@@ -66,6 +74,11 @@ const Butterfly = require("./scripts/butterfly").default;
       let game = new Game(rowNum, colNum);
       let view = new View(el, game);
       timer2 = new Timer(99, view);
+
+      //result button
+      resultButton.addEventListener("click", () => {
+        resultShow.innerHTML = view.grid;
+      });
     });
 
     resetButton2.addEventListener("click", () => {
@@ -77,6 +90,11 @@ const Butterfly = require("./scripts/butterfly").default;
       let game = new Game(rowNum, colNum);
       let view = new View(el, game);
       timer3 = new Timer(99, view);
+
+      //result button
+      resultButton.addEventListener("click", () => {
+        resultShow.innerHTML = view.grid;
+      });
     });
 
 
