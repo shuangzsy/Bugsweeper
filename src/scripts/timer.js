@@ -7,7 +7,7 @@ class Timer{
     this.view = view;
   }
   clear(){
-    
+
   }
 
   start() {
@@ -24,7 +24,7 @@ class Timer{
     else {
       this.gameOver();
       const failtext = document.getElementById('fail-text');
-      failtext.innerHTML = "Time's Up!"
+      failtext.innerHTML = "Game Over!!"
       this.view.showFailscreen();
     }
   }

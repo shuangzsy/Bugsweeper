@@ -22,10 +22,7 @@ class Game {
     }
     return bugCount
   }
-  
+
 }
 
 module.exports = Game;
-
-// const  g = new Game(3,3);
-// console.log(g.board.grid)

@@ -33,9 +33,7 @@ class View {
   }
 
   showResult(square){
-    console.log(square.id[0]);
     let row = parseInt(square.id[0]);
-    
     let col = parseInt(square.id[2]);
     const msg = document.createElement("h2")
 

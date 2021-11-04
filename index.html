@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
   <link rel="stylesheet" href="./dist/main.css" />
   <link rel="shortcut icon" href="./dist/westie.png">
   <script src="./dist/main.js"></script>
@@ -21,26 +22,45 @@
     <div class="menu">
       <audio loop controls src="./dist/backgroundmusic.mp3" muted>
       </audio>
+
+      <p>⏰: <span id="timer">120</span> seconds remaining!</p>
       
     </div>
   </head>
+      <div class="reset">
+        <div class="win-container">You win!
+          <button id="play-again">Play Again</button>
+        </div>
+      
+        <div class="fail-container">
+          <span id="fail-text">Game Over!</span>
+          <button id="play-again-2">Play Again</button>
+        </div>
+
+        <div id="time-plus"> ➕ 10 seconds</div>
+      </div>
+
+    
     <figure class="bugsweeper">
       <img class="start-gif" src="./dist/startdoggie.gif" >
     </figure>
+    <canvas id="canvas"></canvas>
+
 
     <div class="start">
       <button id="start-game">START</button>
     </div>
 
-    <div class = "reset">
+    <!-- <div class = "reset">
       <div class="win-container">You win!
         <button id="play-again">Play Again</button>
       </div>
 
-      <div class="fail-container">You lose!
+      <div class="fail-container"> 
+        <span id="fail-text">Try Again!</span>
         <button id="play-again-2">Play Again</button>
       </div>
-    </div>
+    </div> -->
 
 
 </body>

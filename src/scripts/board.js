@@ -4,8 +4,6 @@ class Board{
     this.column = column;
     this.grid = this.makeGrid();
     this.meatNum  = this.hiddenMarks();
-    console.log("board grid")
-    console.log(this.grid)
   }
 
   makeGrid() {
@@ -17,7 +15,6 @@ class Board{
       grid[i].push(null);
     }
   }
-  console.log(grid)
   return grid;
   }
 
@@ -39,8 +36,7 @@ class Board{
     let blockNum = this.row * this.column;
     let foodNum = Math.floor(blockNum / 2) + 1;
     let bugNum = blockNum - foodNum;
-    console.log(bugNum);
-    console.log(foodNum)
+
     let bugList = [];
     while (bugList.length < bugNum)
     {let randomPos = Math.floor(Math.random() * blockNum);
@@ -58,8 +54,7 @@ class Board{
         }
       }
     }
-    console.log(bugList)
-    console.log(this.grid)
+
     return foodNum;
   }
 }
