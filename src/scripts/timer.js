@@ -6,6 +6,9 @@ class Timer{
     this.start();
     this.view = view;
   }
+  clear(){
+    
+  }
 
   start() {
     this.timer = setInterval(this.updateTimer.bind(this), 1000);
