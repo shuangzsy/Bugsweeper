@@ -22,7 +22,7 @@ const Butterfly = require("./scripts/butterfly").default;
       el.innerHTML = "";
       let game = new Game(rowNum, colNum);
       let view = new View(el, game);
-      timer = new Timer(120, view);
+      timer = new Timer(99, view);
       startButton.style.display = 'none';
 
       // for audio
@@ -65,7 +65,7 @@ const Butterfly = require("./scripts/butterfly").default;
  
       let game = new Game(rowNum, colNum);
       let view = new View(el, game);
-      timer2 = new Timer(120, view);
+      timer2 = new Timer(99, view);
     });
 
     resetButton2.addEventListener("click", () => {
@@ -76,7 +76,7 @@ const Butterfly = require("./scripts/butterfly").default;
 
       let game = new Game(rowNum, colNum);
       let view = new View(el, game);
-      timer3 = new Timer(120, view);
+      timer3 = new Timer(99, view);
     });
 
 
