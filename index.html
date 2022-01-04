@@ -18,13 +18,40 @@
     <div class="header">
       <img id="logo" src="./dist/logo.png" alt="">
       <img id="welcome" src="./dist/welcome.gif" alt="">
+      <div id="instruction">
+        <div>
+          <img src="./dist/instruction-images/grass.png" >
+          <span>: Left click the grass to reveal what's hidden inside</span>
+        </div>
+        <div>
+          <img src="./dist/instruction-images/bug_hints.png">
+          <span>: The number shows how many bugs nearby. Be careful!</span>
+        </div>
+        <div>
+          <img src="./dist/instruction-images/meat.png" >
+          <span>: Yay, it's a meal and game keeps going</span>
+        </div>
+        <div>
+          <img src="./dist/instruction-images/bug.png" >
+          <span>: Aww, it's a bug and you lose the game. Try agian?</span>
+        </div>
+        <div>
+          <img src="./dist/instruction-images/human.png" >
+          <span>: Left click to mark the grass that you think its a bug hidden inside</span>
+        </div>
+        <div>
+          <img src="./dist/instruction-images/butterfly.png">
+          <span>: Click the butterfly to get extra 10 seconds of your time!</span>
+        </div>
+        <!-- <img src=""> -->
+      </div>
     </div>
     <div class="menu">
       <audio loop controls src="./dist/backgroundmusic.mp3" muted>
       </audio>
 
       <p>⏰: <span id="timer">99</span> seconds remaining!</p>
-      <button id="result">Show Result</button>
+      <button id="result">Hints</button>
       <p id="result-show"></p>
       
     </div>

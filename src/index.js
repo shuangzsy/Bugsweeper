@@ -11,6 +11,7 @@ const Butterfly = require("./scripts/butterfly").default;
     const timeElement = document.getElementById('timer');
     const resultButton = document.getElementById('result');
     const resultShow = document.getElementById('result-show');
+    
 
     let rowNum = 5;
     let colNum = 5;
@@ -21,11 +22,16 @@ const Butterfly = require("./scripts/butterfly").default;
 
     
     startButton.addEventListener("click", () => {
+
       el.innerHTML = "";
       let game = new Game(rowNum, colNum);
       let view = new View(el, game);
       timer = new Timer(99, view);
       startButton.style.display = 'none';
+
+      //instruction
+      let instruction = document.getElementById('instruction');
+      instruction.style.display = 'flex';
 
       // for audio
       const audio = document.querySelector("audio");

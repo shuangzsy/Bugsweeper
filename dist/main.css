@@ -22,7 +22,8 @@ figure {
   margin: 0 auto;
   justify-content: center;
   align-items: center;
-  height: 50px;
+  height: 60px;
+  margin-top: 20px !important;
 }
 
 audio {
@@ -211,4 +212,13 @@ img {
     transform: translate3d(0, -4px, 0);
     transform-style: preserve-3d;
   }
+}
+
+#instruction{
+  border-radius:15px;
+  border-color: cadetblue;
+  border-style: double;
+  width:auto;
+  height:140px;
+  background-color: cornsilk;
 }
