@@ -15,7 +15,7 @@ const Butterfly = require("./scripts/butterfly").default;
 
     let rowNum = 5;
     let colNum = 5;
-    let timer = new Timer(10);
+    let timer = new Timer(99);
     const el = document.querySelector(".bugsweeper");
 
     
