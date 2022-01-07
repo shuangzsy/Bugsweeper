@@ -234,3 +234,8 @@ img {
   padding: 10px;
   margin: 10px;
 }
+
+#close-instruction-button {
+  float: right;
+  color: red;
+}
