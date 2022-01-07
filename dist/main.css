@@ -117,6 +117,10 @@ li {
   text-align: center;
 }
 
+ul:hover {
+  cursor: url("westie.png"), default !important;
+}
+
 li:hover {
   display: block;
   height: 70px;
@@ -213,12 +217,12 @@ img {
     transform-style: preserve-3d;
   }
 }
-
-#instruction{
-  border-radius:15px;
+#instruction-details {
+  border-radius: 15px;
   border-color: cadetblue;
   border-style: double;
-  width:auto;
-  height:140px;
+  width: auto;
+  height: 140px;
   background-color: cornsilk;
+  display: none;
 }

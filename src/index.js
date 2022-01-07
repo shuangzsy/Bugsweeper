@@ -15,9 +15,7 @@ const Butterfly = require("./scripts/butterfly").default;
 
     let rowNum = 5;
     let colNum = 5;
-    let timer;
-    let timer2;
-    let timer3;
+    let timer = new Timer(10);
     const el = document.querySelector(".bugsweeper");
 
     
@@ -26,12 +24,22 @@ const Butterfly = require("./scripts/butterfly").default;
       el.innerHTML = "";
       let game = new Game(rowNum, colNum);
       let view = new View(el, game);
-      timer = new Timer(99, view);
       startButton.style.display = 'none';
 
-      //instruction
-      let instruction = document.getElementById('instruction');
-      instruction.style.display = 'flex';
+      //timer
+      timer.start(
+        () => {
+          const failtext = document.getElementById('fail-text');
+          failtext.innerHTML = "Game Over!!"
+          view.showFailscreen();
+        }
+      );
+      // if (timeElement.innerHTML === "1"){
+      //   const failtext = document.getElementById('fail-text');
+      //   failtext.innerHTML = "Game Over!!"
+      //   this.view.showFailscreen();
+      // }
+
 
       // for audio
       const audio = document.querySelector("audio");
@@ -47,13 +55,9 @@ const Butterfly = require("./scripts/butterfly").default;
       let butterflyTimer = setInterval(function () { butterfly = new Butterfly(canvas, 10, 10); }, 10000);
 
       canvas.addEventListener('click', function (event) {
-        console.log(butterfly.x)
-        console.log(canvas.width);
-        console.log(canvas.height);
         var rect = canvas.getBoundingClientRect();
         var x = event.clientX - rect.left;
         var y = event.clientY - rect.top;
-        console.log("x: " + x + " y: " + y);
         if ( x < butterfly.x + 20 && x > butterfly.x -20){
           const timePlus = document.getElementById("time-plus");
           timePlus.style.display = 'flex';
@@ -62,11 +66,10 @@ const Butterfly = require("./scripts/butterfly").default;
         }, false);
 
       //result button
-      resultButton.addEventListener("click", () => {
-        resultShow.innerHTML = view.grid;
-      });
+      // resultButton.addEventListener("click", () => {
+      //   resultShow.innerHTML = view.grid;
+      // });
 
-      
     });
 
     resetButton.addEventListener("click", () => {
@@ -75,38 +78,34 @@ const Butterfly = require("./scripts/butterfly").default;
       const failWindow = document.querySelector(".fail-container");
       failWindow.style.display = 'none';
       el.innerHTML = "";
-      // timer.timeLeft = 0;
  
       let game = new Game(rowNum, colNum);
       let view = new View(el, game);
-      timer2 = new Timer(99, view);
+      timer.reset();
+      timer.start();
 
       //result button
-      resultButton.addEventListener("click", () => {
-        resultShow.innerHTML = view.grid;
-      });
+      // resultButton.addEventListener("click", () => {
+      //   resultShow.innerHTML = view.grid;
+      // });
     });
 
     resetButton2.addEventListener("click", () => {
       const failWindow = document.querySelector(".fail-container");
       failWindow.style.display = 'none';
       el.innerHTML = "";
-      // timer.timeLeft = 0;
 
       let game = new Game(rowNum, colNum);
       let view = new View(el, game);
-      timer3 = new Timer(99, view);
+      timer.reset();
+      timer.start();
 
-      //result button
-      resultButton.addEventListener("click", () => {
-        resultShow.innerHTML = view.grid;
-      });
+
+      // //result button
+      // resultButton.addEventListener("click", () => {
+      //   resultShow.innerHTML = view.grid;
+      // });
     });
-
-
-
-
-
 
   });
 

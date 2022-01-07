@@ -18,7 +18,8 @@
     <div class="header">
       <img id="logo" src="./dist/logo.png" alt="">
       <img id="welcome" src="./dist/welcome.gif" alt="">
-      <div id="instruction">
+      <div id="instruction-details">
+        <button id="close-instruction-button" onClick="closeInstruction()" >X</button>
         <div>
           <img src="./dist/instruction-images/grass.png" >
           <span>: Left click the grass to reveal what's hidden inside</span>
@@ -47,12 +48,23 @@
       </div>
     </div>
     <div class="menu">
+      <a href="https://www.linkedin.com/in/shuang-zheng-54a3109b/"><img src="./dist/linkedin.png"></a>
+      <a href="https://github.com/shuangzsy"><img src="./dist/github.png"></a>
       <audio loop controls src="./dist/backgroundmusic.mp3" muted>
       </audio>
 
-      <p>⏰: <span id="timer">99</span> seconds remaining!</p>
-      <button id="result">Hints</button>
-      <p id="result-show"></p>
+      <p>⏰ : <span id="timer">99</span> seconds remaining!</p>
+      <!-- <button id="result">Hints</button>
+      <p id="result-show"></p> -->
+      <button id="instruction-show-button" onClick="openInstruction()" >Instruction</button>
+      <script>
+        function openInstruction() {
+            document.getElementById("instruction-details").style.display = "inline-block";
+          };
+        function closeInstruction() {
+            document.getElementById("instruction-details").style.display = "none";
+          };
+      </script>
       
     </div>
   </head>
