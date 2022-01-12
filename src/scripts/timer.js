@@ -22,7 +22,6 @@ class Timer{
 
   updateTimer(cb) {
     this.timeLeft = this.time - ++this.timeElapsed 
-    console.log(this.timeLeft)
     if (this.timeLeft >= 0){
       this.printTime();
     }else {

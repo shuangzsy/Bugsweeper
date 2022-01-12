@@ -8,7 +8,6 @@ class View {
     this.bindEvents2();
     this.meatNum = this.game.board.meatNum;
     this.countMeat = 0;
-    console.log(this.grid)
   }
 
   bindEvents() {
